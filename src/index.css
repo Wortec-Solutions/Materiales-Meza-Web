@@ -1,0 +1,22 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scroll-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.3333%, 0, 0);
+  }
+}
+
+@layer utilities {
+  .animate-scroll-left {
+    animation: scroll-left 30s linear infinite;
+  }
+  .paused {
+    animation-play-state: paused;
+  }
+}

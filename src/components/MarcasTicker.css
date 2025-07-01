@@ -1,0 +1,27 @@
+.marcas-container {
+  overflow: hidden;
+  background-color: white;
+  padding: 1rem 0;
+}
+
+.marcas-slider {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+.marca-img {
+  height: 60px;
+  margin-right: 2rem;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
