@@ -11,6 +11,8 @@ import MarcasTicker from './components/MarcasTicker';
 
 // pages
 import Home from './pages/home/home';
+import Producto from './pages/productos/producto';
+
 
 
 
@@ -159,7 +161,7 @@ export default function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/productos" element={<Productos />} />
+            <Route path="/productos" element={<Producto />} />
             <Route path="/cotizaciones" element={<Cotizaciones />} />
             <Route path="/trabaja" element={<Trabaja />} />
             <Route path="/sucursales" element={<Sucursales />} />
