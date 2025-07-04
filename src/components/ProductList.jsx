@@ -1,8 +1,9 @@
-// src/components/ProductList.jsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
-export default function ProductList({ addToCart }) {
+export default function ProductList() {
   const [productos, setProductos] = useState([]);
+  const { addToCart } = useContext(CartContext); // Usamos el contexto aquí
 
   useEffect(() => {
     fetch('/api/products')

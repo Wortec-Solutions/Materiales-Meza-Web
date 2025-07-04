@@ -6,21 +6,22 @@ const items = ['Inicio', 'Productos', 'Cotizaciones', 'Trabaja', 'Sucursales', '
 
 export default function Navbar() {
   return (
-    <nav className="bg-white shadow-md">
-      <div className="max-w-6xl mx-auto px-4 lg:px-8 flex justify-between items-center h-16">
+    <nav className="bg-gray-800 shadow-md">
+      <div className="w-full mx-auto px-4 lg:px-8 flex justify-between items-center h-16">
         <Link to="/">
           <img src="/logoMM.jpg" alt="Materiales Meza" className="h-12" />
         </Link>
 
-        <div className="flex-1 mx-4">
+        <div className="flex-1 mx-4 max-w-xs">
           <input
             type="text"
             placeholder="Buscar..."
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+            className="w-full px-2 py-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
           />
+          {/* Reducimos los márgenes */}
         </div>
 
-        <div className="space-x-6">
+        <div className="space-x-6 flex items-center">
           {items.map(label => {
             const path = label === 'Inicio' ? '/' : `/${label.toLowerCase()}`;
             return (
@@ -29,18 +30,21 @@ export default function Navbar() {
                 to={path}
                 end={path === '/'} 
                 className={({ isActive }) =>
-                  `text-blue-800 hover:text-red-600 transition ${
-                    isActive ? 'font-bold underline' : ''
-                  }`
+                  `text-white hover:text-red-600 transition ${isActive ? 'font-bold underline' : ''} hover:ring-2 hover:ring-blue-500`
                 }
               >
                 {label}
               </NavLink>
             );
           })}
+
+          {/* Carrito de compras */}
+          <Link to="/cart" className="text-white hover:text-red-600 transition ml-6">
+            <i className="fas fa-shopping-cart text-2xl"></i>
+          </Link>
+
         </div>
       </div>
     </nav>
-);
+  );
 }
-
