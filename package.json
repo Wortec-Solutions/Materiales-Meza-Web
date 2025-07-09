@@ -8,7 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@tailwindcss/forms": "^0.5.10",
+    "aos": "^2.3.4",
     "daisyui": "^5.0.43",
     "font-awesome": "^4.7.0",
     "react": "^19.1.0",
@@ -16,14 +18,16 @@
     "react-floating-whatsapp": "^5.0.8",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.2",
-    "react-slideshow-image": "^4.3.2"
+    "react-slick": "^0.30.3",
+    "react-slideshow-image": "^4.3.2",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.27.1",
     "@vitejs/plugin-react": "^4.6.0",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17",
     "vite": "^6.3.5",
     "vite-plugin-svgr": "^4.3.0",
     "vite-tsconfig-paths": "^5.1.4"

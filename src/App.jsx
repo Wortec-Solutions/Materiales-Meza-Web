@@ -9,42 +9,23 @@ import WhatsAppButton from './components/WhatsAppButton';
 import Sucursales from './components/Sucursales';
 import MarcasTicker from './components/MarcasTicker';
 
+// Icons
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+// Context
+import { CartProvider } from './context/CartContext'; 
+
+// Animations package
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import 'aos/dist/aos.css';
+
+
+
 // pages
 import Home from './pages/home/home';
 
 
-
-
-// ——— Contexto del carrito —————————————————
-const CartContext = createContext();
-
-export function useCart() {
-  return useContext(CartContext);
-}
-
-export function CartProvider({ children }) {
-  const [cart, setCart] = useState([]);
-
-  function addToCart(product) {
-    setCart(prev => {
-      const found = prev.find(x => x.id === product.id);
-      if (found) return prev.map(x =>
-        x.id === product.id ? { ...x, qty: x.qty + 1 } : x
-      );
-      return [...prev, { ...product, qty: 1 }];
-    });
-  }
-
-  function removeFromCart(id) {
-    setCart(prev => prev.filter(x => x.id !== id));
-  }
-
-  return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
-      {children}
-    </CartContext.Provider>
-  );
-}
 // ——————————————————————————————————————————
 
 function Productos() {

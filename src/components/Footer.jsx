@@ -19,11 +19,11 @@ export default function Footer() {
         <div className="grid gap-10 row-gap-8 lg:grid-cols-5 mb-8">
 
           {/* Logo y descripción */}
-          <div className="lg:col-span-1">
-            <img src="/logoMM.jpg" alt="Materiales Meza" className="h-12 mb-4" />
-            <p className="text-sm text-gray-300">
+          <div className="flex justify-center lg:col-span-1">           
+              <img src="/logoMM.jpg" alt="Materiales Meza" className="h-40 w-40 mb-4" />
+            {/* <p className="text-sm text-gray-300">
               Materiales Meza: Construcción, compromiso y confianza en cada proyecto.
-            </p>
+            </p> */}
           </div>
 
           {/* Servicio al Cliente */}
