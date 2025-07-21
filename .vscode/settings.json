@@ -1,0 +1,6 @@
+// .vscode/settings.json
+{
+  "workbench.colorTheme": "GitHub Dark Default",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
