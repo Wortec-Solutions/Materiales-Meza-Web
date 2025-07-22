@@ -4,7 +4,7 @@ import { CartContext } from '../context/CartContext';
 import ModalCart from '../components/modalCart'; // Ajusta el path si está en otro directorio
 
 // Lista de items para el menú
-const items = ['Inicio', 'Productos', 'Cotizaciones', 'Trabaja', 'Sucursales', 'Contacto'];
+const items = ['Inicio', 'Productos', 'Trabaja', 'Sucursales', 'Contacto'];
 
 // Componente NavbarMobile
 
@@ -109,7 +109,7 @@ export function NavbarDesktop() {
   const [showCartModal, setShowCartModal] = useState(false);
   const { cart } = useContext(CartContext);
 
-  const items = ['Inicio', 'Productos', 'Cotizaciones', 'Trabaja', 'Sucursales', 'Contacto'];
+  const items = ['Inicio', 'Productos', 'Trabaja', 'Sucursales', 'Contacto'];
 
   return (
     <>
